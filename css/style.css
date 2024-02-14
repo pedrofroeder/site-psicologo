@@ -509,3 +509,18 @@ span {
         gap: 10px;
     }
 }
+
+/*celulares menores */
+@media only screen and (max-width: 394px) {
+    .home-container .home-elements h1 {
+        font-size: 22px;
+    }
+
+    .home-container .home-elements h2 {
+        font-size: 15px;
+    }
+
+    .home-container .home-elements a {
+        width: 190px;
+    }
+}
