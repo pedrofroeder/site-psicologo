@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+span {
+    font-weight: bold;
+}
+
+/*header*/
+.header {
+    background-color: transparent;
+    padding-inline: 16px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+    transition: background-color 0.3s ease;
+}
+
+.header-colored {
+    background-color: #242424; 
+    box-shadow: 0 2px 4px #00000033;
+}
+
+.nav {
+    max-width: 1280px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 35px;
+    color: #fff;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: end;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-list a {
+    font-size: 18px;
+    color: #fff;
+    padding-block: 16px;
+}
+
+.nav-list .btn-contact,
+.btn-home {
+    background-color: #3c7d82;
+    border-radius: 10px;
+    padding: 9px;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.nav-list .btn-contact:hover,
+.btn-home:hover {
+    background-color: #2f6164;
+}
+
+.hamburguer {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 5px;
+    position: relative;
+}
+
+/*top*/
+.home-container {
+    background-image: linear-gradient(#0000008f, #0000008f), url("../imagens/pscologo.jpg");
+    height: 100vh;
+    background-position: center top -50px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 3px;
+    /*background-attachment: fixed; */
+}
+
+.home-container .home-elements {
+    margin-top: 10px;
+    color: black;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container .home-elements h1 {
+    color: #fff;
+    font-size: 50px;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.home-container .home-elements h2 {
+    color: #fff;
+    font-size: 30px;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+/*about-me*/
+.about-me-container {
+    padding-block: 30px;
+    background-color: #3c7d8215;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-container .about-me-content {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 90%;
+}
+
+.about-me-container .about-me-content .text h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-me-container .about-me-content .text p {
+    margin-bottom: 18px;
+    font-size: 18px;
+    text-align: justify;
+}
+
+/*accordion list*/
+#services {
+    background-color: #3c7d82;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+.accordion {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-block: 30px;
+}
+
+.accordion h1 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.accordion-item {
+  background-color: #ffffff;
+  color: #111;
+  margin: 0.8rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+.accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+.accordion-item-body-content ul {
+    padding-left: 1rem;
+}
+
+.accordion-item-body-content li {
+    margin-bottom: 10px;
+}
+
+/*prices*/
+.prices-container {
+    background-color: #3c7d8215;
+    padding-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prices-container h2 {
+    margin-bottom: 20px;
+}
+
+.prices-content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.prices-content .price ul {
+    list-style: none;
+}
+
+.prices-container .prices-content .price {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.prices-container .prices-content h3 {
+    margin-bottom: 20px;
+}
+
+.prices-container .prices-content .price h3,
+.prices-container .prices-content .price ul {
+    text-align: center;
+}
+
+.prices-container .prices-content .price li {
+    margin-bottom: 15px;
+}
+
+/*footer*/
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    height: 20vh;
+}
+
+.footer-container .footer-content {
+    width: 85%;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}
+
+/*header-responsivo*/
+@media (max-width: 750px) {
+    .hamburguer {
+        display: block;
+        z-index: 1;
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #242424;
+        clip-path: circle(30px at 90% -15%);
+        transition: 1s ease-out;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    .nav-list a {
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    .nav-list li:nth-child(1) a {
+        transition: 0.5s 0.1s;
+    }
+
+    .nav-list li:nth-child(2) a {
+     transition: 0.5s 0.3s;   
+    }
+
+    .nav-list li:nth-child(3) a {
+        transition: 0.5s 0.6s;
+    }
+
+    .nav-list li:nth-child(4) a {
+        transition: 0.5s 0.9s;
+    }
+
+    .nav.active .nav-list {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    .nav.active .nav-list a {
+        opacity: 1;
+    }
+    
+    .nav.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    .nav.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    .nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+}
+
+/*accordion*/
+@media (max-width: 576px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+   .top-container {
+    background-position: center left 38%;
+   }
+
+   .top-container h1 {
+    font-size: 30px;
+   }
+
+   .top-container p {
+    font-size: 15px;
+   }
+
+   .accordion {
+    max-width: 90%;
+   }
+
+}
+
+@media (max-width: 750px) {
+    .accordion {
+        width: 500px;
+    }
+}
+
+/*monitor*/
+@media  screen and (min-width: 1500px) {
+
+    .about-me-container .about-me-content h2 {
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+  
+    .about-me-container .about-me-content p {
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    .accordion {
+        max-width: 80%;
+    }
+}
+
+/*small laptop*/
+@media (max-width: 1100px) {
+    .prices-container {
+        padding-block: 30px;
+    }
+
+    .prices-container h2 {
+        margin-top: 30px;
+    }
+
+    .prices-container .prices-content {
+        width: 85%;
+        gap: 15px;
+    }
+
+}
+  
+/*tablet*/
+@media (max-width: 900px) {
+
+    .home-container {
+        background-position: center top;
+     background-size: cover;
+    }
+
+    .about-me-container .about-me-content {
+        flex-direction: column-reverse;
+    }
+
+    .about-me-container .about-me-content img {
+        width: 350px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(0, 255, 0, 0.411);
+        border-radius: 50%;
+    }
+
+    .prices-container .prices-content {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/*celular*/
+@media (max-width: 576px) {
+    .home-container {
+        background-position: center top ;
+    }
+
+    .home-container .home-elements h1 {
+        font-size: 26px;
+    }
+    .home-container .home-elements h2 {
+        font-size: 18px;
+    }
+
+    .home-container .about-me-content {
+        flex-direction: column-reverse;
+    }
+
+    .about-me-container .about-me-content img {
+        width: 250px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(0, 255, 0, 0.411);
+        border-radius: 50%;
+    }
+
+    .about-me-container .about-me-content .text p {
+        font-size: 15px;
+    }
+
+    .prices-container .prices-content {
+        flex-wrap: wrap;
+        width: 96%;
+        gap: 3px;
+    }
+
+    .price {
+        width: 200px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
