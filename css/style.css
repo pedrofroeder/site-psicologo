@@ -484,7 +484,7 @@ span {
     .about-me-container .about-me-content img {
         width: 250px;
         margin-bottom: 20px;
-        border: 1px solid rgba(0, 255, 0, 0.411);
+        border: 1px solid #3c7d82;
         border-radius: 50%;
     }
 
