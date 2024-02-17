@@ -11,7 +11,6 @@ navLinks.forEach(link => {
     });
 });
 
-//links
 const menuLinks = document.querySelectorAll('.nav a[href^="#"]');
 
 function getDistanceFromTheTop(element) {
@@ -36,29 +35,22 @@ menuLinks.forEach((link) => {
   link.addEventListener("click", scrollToSection);
 });
 
-//cor pro header 
 const header = document.querySelector(".header");
 const homeSection = document.getElementById("home");
 
 function toggleHeaderBackground() {
     const scrollPosition = window.scrollY;
-
     if (scrollPosition < homeSection.offsetHeight) {
-        header.classList.remove("header-colored"); // Remove a classe quando a página está dentro do #home
+        header.classList.remove("header-colored"); 
     } else {
-        header.classList.add("header-colored"); // Adiciona a classe quando a página passa do #home
+        header.classList.add("header-colored"); 
     }
 }
 window.addEventListener("scroll", toggleHeaderBackground);
 
-
-
 const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
-
-// accordion
 accordionItemHeaders.forEach(accordionItemHeader => {
   accordionItemHeader.addEventListener("click", event => {
-    
     accordionItemHeader.classList.toggle("active");
     const accordionItemBody = accordionItemHeader.nextElementSibling;
     if(accordionItemHeader.classList.contains("active")) {
